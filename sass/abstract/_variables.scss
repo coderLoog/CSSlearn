@@ -1,0 +1,26 @@
+$color-primary: #7ed56f;
+$color-primary-light: #62de86;
+$color-primary-dark: #12b648;
+
+$color-grey:#777777;
+$color-white:#ffffff;
+$color-dark:#000000;
+$color-grey-light-1:#f7f7f7;
+$color-secondary-light:#ffb900;
+$color-secondary-dark:#ff7730;
+$color-tertiary-light:#2998ff;
+$color-tertiary-dark:#5643fa;
+$color-grey-light-2:#eeeeee;
+$color-grey-dark2:#999999;
+$color-grey-dark3:#333333;
+
+
+
+$grid-width:114rem;
+$gutter-vertical:8rem;
+$gutter-horizontal:6rem;
+$git:calc((100% - #{$gutter-horizontal}) / 2);
+
+
+
+$default-font-size:1.8rem;

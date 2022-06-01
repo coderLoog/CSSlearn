@@ -1,0 +1,86 @@
+.popup {
+
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100vh;
+  background-color: rgba($color-dark,.6);
+  z-index: 9999;
+  width:100%;
+  opacity: 1;
+  visibility: hidden;
+  transition: all .3s;
+
+
+  &_close {
+    &:link,
+    &:visited {
+      color: $color-grey;
+      position: absolute;
+      top: 2.5rem;
+      right:2.5rem;
+      font-size:3rem;
+      display: inline-block;
+      transition: all .2s;
+      text-decoration: none;
+      line-height: 1;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &_content {
+    @include absCenter;
+    width:75%;
+    height: 50rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-dark,.2);
+    border-radius: 1rem;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    z-index: inherit;
+    transform:translate(-50%,-50%) scale(.5);
+    transition: all .5s .2s;
+  }
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:target &_content {
+    opacity: 1;
+    transform:translate(-50%,-50%) scale(1);
+
+  }
+
+  &_left {
+    width: 33.3333333%;
+    display: table-cell;
+
+  }
+  &_img{
+    display: block;
+    width: 100%;
+  }
+  &_paragraph{
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;//1rm=14px
+    column-rule: 1px solid $color-grey-light-2;
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+  &_right{
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+}
